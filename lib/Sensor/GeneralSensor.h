@@ -7,7 +7,6 @@
 
 #include <Arduino.h>
 #include <map>
-#include <unordered_map>
 
 class GeneralSensor{
 
@@ -15,8 +14,11 @@ public:
     explicit GeneralSensor(uint8_t slave_addr):_slave_addr(slave_addr){};
     virtual void begin() = 0;
     virtual bool read_sensor() = 0;
-    virtual bool setSps(uint16_t sps) = 0;
-    virtual void print(HardwareSerial &serial) = 0;
+    virtual bool setSps(uint16_t sps) {};
+    void print(HardwareSerial &serial){
+        for(auto &p : _sensor_data)
+            serial.printf("%s: %f\n", p.first.c_str(), p.second);
+    };
 
 protected:
     std::map<String, float> _sensor_data;

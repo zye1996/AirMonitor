@@ -15,7 +15,6 @@ public:
     void begin() override;
     bool read_sensor() override;
     bool setSps(uint16_t sps) override;
-    void print(HardwareSerial &serial) override;
 
     friend class SensorHub;
 

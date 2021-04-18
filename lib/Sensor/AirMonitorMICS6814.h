@@ -1,0 +1,14 @@
+//
+// Created by Zhenyi Ye on 4/15/21.
+//
+
+#ifndef AIRMONITOR_AIRMONITORMICS6814_H
+#define AIRMONITOR_AIRMONITORMICS6814_H
+
+
+class AirMonitorMICS6814 {
+
+};
+
+
+#endif //AIRMONITOR_AIRMONITORMICS6814_H

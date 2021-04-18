@@ -40,8 +40,3 @@ bool AirMonitorCCS811::setSps(uint16_t sps) {
         _ccs811.setDriveMode(sps);
     }
 }
-
-void AirMonitorCCS811::print(HardwareSerial &serial) {
-    for(auto &p : _sensor_data)
-        serial.printf("%s: %f\n", p.first.c_str(), p.second);
-}
