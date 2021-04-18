@@ -11,7 +11,7 @@
 
 class AirMonitorCCS811: public GeneralSensor {
 public:
-    explicit AirMonitorCCS811(uint8_t slaveAddr) : GeneralSensor(slaveAddr) {}
+    explicit AirMonitorCCS811(uint8_t slaveAddr=0x5B) : GeneralSensor(slaveAddr) {}
     void begin() override;
     bool read_sensor() override;
     bool setSps(uint16_t sps) override;

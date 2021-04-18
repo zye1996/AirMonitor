@@ -7,6 +7,9 @@
 
 #define ENABLE_CCS811
 #define ENABLE_BMP280
+#define ENABLE_HTU21D
+#define ENABLE_VZ89TE
+#define ENAGLE_MICS6814
 #define ENABLE_IAQ_CORE
 #define ENABLE_PARTICLE
 #define ENABLE_HT
